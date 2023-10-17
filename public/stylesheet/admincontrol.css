@@ -1,0 +1,178 @@
+/* admin.css */
+
+/* Reset some default styles for better consistency */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+table {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: Arial, sans-serif;
+}
+
+/* Page Layout */
+body {
+    background-color: #f2f2f2;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+nav ul {
+    background-color: #444;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Users List Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th,
+table td {
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #333;
+    color: #fff;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* User Profile */
+#user-profile {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+/* Form Styles */
+form {
+    display: inline;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+/* Responsive Design - Adjust as needed */
+@media (max-width: 768px) {
+    nav ul {
+        text-align: left;
+        padding: 10px;
+        display: block;
+    }
+
+    nav ul li {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+    }
+}
+
+/* Style for the navigation bar */
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Style for the search form */
+form {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button[type="submit"] {
+    padding: 5px 10px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+

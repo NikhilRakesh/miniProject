@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/stylesheet/admincontrol.css">
+</head>
+
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/admin">Back</a></li>
+            <!-- Add more navigation links as needed -->
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Users List -->
+        <section id="user-list">
+            <h2>List of Users</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                        <th>Delete</th>
+                        <th>Edit</th>
+                    </tr>
+                    <nav>
+                        <!-- Add a search form -->
+                        <form action="/usersearch" method="get">
+                            <input type="text" name="searchQuery" placeholder="Search users">
+                            <button type="submit">Search</button>
+                        </form>
+                    </nav>
+
+                </thead>
+                <tbody>
+                    <!-- Loop through users and display their information -->
+                    <% users.forEach(user=> { %>
+                        <tr>
+                            <td>
+                                <%= user.username %>
+                            </td>
+                            <td>
+                                <%= user.email %>
+                            </td>
+                            <td>
+                                <% if (user.blocked) { %>
+                                    Blocked
+                                    <% } else { %>
+                                        Active
+                                        <% } %>
+                            </td>
+                            <td>
+                                <% if (user.blocked) { %>
+                                    <a href="/userunblock/<%= user._id %>"><button>Unblock</button></a>
+                                    <% } else { %>
+                                        <a href="/userblock/<%= user._id %>"><button>Block</button></a>
+                                        <% } %>
+                            <td>
+                                <a href="/userdelete/<%= user._id %>"><button>Delete</button></a>
+                            </td>
+                            <td>
+                                <a href="/useredit/<%= user._id %>"><button>Edit</button></a>
+                            </td>
+                            </td>
+                        </tr>
+
+                        <% }); %>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- User Profile -->
+        <section id="user-profile">
+            <h2>Create User</h2>
+            <div>
+
+                <!-- Inside your admin page's HTML -->
+                <form action="/createuser" method="POST">
+                    <label for="username">Username:</label>
+                    <input type="text" name="cusername" value="">
+
+                    <label for="email">Email:</label>
+                    <input type="email" name="cemail" value="">
+
+                    <label for="email">Password:</label>
+                    <input type="password" name="cpassword" value="">
+
+                    <button type="submit">Save</button>
+                </form>
+
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Your Company</p>
+    </footer>
+</body>
+
+</html>

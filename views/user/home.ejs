@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheet/home.css">
+    <title>Your Unique Home Page</title>
+</head>
+
+<body>
+    <header>
+        <h1>Your Unique Website</h1>
+        <p>Welcome to a world of creativity and innovation</p>
+        <div class="logout-container">
+            <a href="/logout"><button class="logout-button">Logout</button> </a>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <h2>Discover Something Extraordinary</h2>
+            <p>Explore our amazing features and services that will transform your experience.</p>
+            <a href="/explore" class="cta-button">Get Started</a>
+        </section>
+
+
+    </main>
+    <script>
+        // JavaScript to display the welcome message
+        window.addEventListener('DOMContentLoaded', () => {
+            const welcomeMessage = document.getElementById('welcome-message');
+            welcomeMessage.style.display = 'block';
+        });
+    </script>
+    <footer>
+        <p>&copy; 2023 Your Company</p>
+    </footer>
+</body>
+
+</html>

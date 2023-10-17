@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #35495e;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+.hero {
+    background-image: url('your-background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #35495e;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #35495e;
+}
+
+.cta-button {
+    background-color: #ff5722;
+    color: #ffffff;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #ff7043;
+}
+
+/* Add more styles for other sections as needed */
+
+footer {
+    background-color: #35495e;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+} */
+
+.logout-container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.logout-button {
+    background-color: #ff5722;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background-color: #ff7043;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheet/style.css">
+  <title>LoginPage</title>
+</head>
+
+<body>
+  <div class="login-box">
+    <h2>Login</h2>
+    <form method="post" action="/login">
+      <input type="text" placeholder="Username" name="lusername" required>
+      <input type="password" placeholder="Password" name="lpassword" required>
+      <!-- <button type="submit">Login</button> -->
+      <button type="submit" class="btn btn-lg btn-danger" data-bs-toggle="popover" data-bs-title="Popover title"
+        data-bs-content="And here's some amazing content. It's very engaging. Right?">login</button>
+      <p>
+        <%= msg %>
+      </p>
+      <a href="/signup">Create new account</a>
+    </form>
+  </div>
+</body>
+
+</html>

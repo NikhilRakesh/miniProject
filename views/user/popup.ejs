@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* CSS for the popup message */
+    .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .popup-content {
+        font-size: 18px;
+        color: #333;
+    }
+</style>
+
+<body>
+    <div id="success-popup" class="popup">
+        <span class="popup-content">Successfully signed in!</span>
+    </div>
+</body>
+<script>
+
+    function showSuccessPopup() {
+        const popup = document.getElementById('success-popup');
+        popup.style.display = 'block';
+
+        setTimeout(() => {
+            popup.style.display = 'none';
+        }, 3000);
+    }
+
+    function closePopup() {
+        const popup = document.getElementById('success-popup');
+        popup.style.display = 'none';
+    }
+
+
+    showSuccessPopup();
+
+</script>
+
+</html>

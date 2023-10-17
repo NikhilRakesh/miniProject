@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit User</title>
+    <link rel="stylesheet" href="/stylesheet/useredit.css">
+</head>
+
+<body>
+    <header>
+        <h1>Edit User</h1>
+    </header>
+
+    <main>
+        <form action="/updateuser/<%=user._id  %>" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" name="username" value="<%= user.username %>">
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" value="<%=user.email %>">
+
+            <!-- Add more input fields for other user attributes as needed -->
+
+            <button type="submit">Save Changes</button>
+        </form>
+    </main>
+</body>
+
+</html>
